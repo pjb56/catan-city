@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thunder FC</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b1020;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 5rem;
+      color: #00ff88;
+      text-shadow: 0 0 20px rgba(0,255,136,0.8);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      margin-top: 15px;
+      max-width: 700px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 40px;
+      background: #00ff88;
+      color: #111;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: white;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #00ff88;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #151d35;
+      padding: 25px;
+      border-radius: 20px;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,255,136,0.3);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .score-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .team {
+      background: #151d35;
+      padding: 30px;
+      border-radius: 20px;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    .score {
+      font-size: 4rem;
+      color: #00ff88;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #050811;
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+    }
+
+    .ball {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      background: white;
+      border-radius: 50%;
+      top: 80%;
+      left: -60px;
+      animation: kick 12s linear infinite;
+      box-shadow: inset -10px -10px 0 #222;
+    }
+
+    @keyframes kick {
+      0% {
+        transform: translateX(0) rotate(0deg);
+      }
+      100% {
+        transform: translateX(120vw) rotate(1080deg);
+      }
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 3rem;
+      }
+
+      .score {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ball"></div>
+
+  <header>
+    <h1>THUNDER FC ⚽</h1>
+    <p>
+      Welcome to the home of football passion, electric fans,
+      and unstoppable energy.
+    </p>
+
+    <button class="btn" onclick="showMessage()">
+      Join The Fans
+    </button>
+  </header>
+
+  <section>
+    <h2>Star Players</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>⚡ Alex Storm</h3>
+        <p>Top scorer with lightning speed and unstoppable finishing.</p>
+      </div>
+
+      <div class="card">
+        <h3>🧤 Mason Steel</h3>
+        <p>Legendary goalkeeper known for impossible saves.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎯 Leo Blaze</h3>
+        <p>Midfield magician controlling every match.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Latest Match</h2>
+
+    <div class="score-box">
+      <div class="team">
+        <h3>Thunder FC</h3>
+      </div>
+
+      <div class="score">3 - 1</div>
+
+      <div class="team">
+        <h3>City United</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Thunder FC — Built for GitHub Pages</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("⚽ Welcome to the Thunder FC fan club!");
+    }
+  </script>
+
+</body>
+</html>
